@@ -1,0 +1,92 @@
+# robots.txt for qibook.com
+# 企百科 - AI驱动的企业信用信息查询平台
+# 更新日期：2026-02-28
+
+# 允许所有常规搜索引擎爬虫
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /api/
+Disallow: /static/config.js
+
+# ============================================
+# 中国主流 AI 平台爬虫 - 明确允许
+# ============================================
+
+# 字节跳动 - 豆包/头条搜索
+User-agent: Bytespider
+Allow: /
+
+# 百度 - 文心一言/百度搜索
+User-agent: Baiduspider
+Allow: /
+
+# 深度求索 - DeepSeek
+User-agent: DeepSeekBot
+Allow: /
+
+# 搜狗 - 腾讯元宝后端搜索引擎之一
+User-agent: Sogou web spider
+Allow: /
+
+# 华为花瓣搜索 - PetalBot
+User-agent: PetalBot
+Allow: /
+
+# 阿里巴巴 - 千问/夸克
+User-agent: Alibaba.Security.Heimdall
+Allow: /
+
+User-agent: aliyunsecbot
+Allow: /
+
+# 必应 - 腾讯元宝后端搜索引擎之一
+User-agent: bingbot
+Allow: /
+
+# 神马搜索
+User-agent: YisouSpider
+Allow: /
+
+# 360搜索
+User-agent: 360Spider
+Allow: /
+
+# ============================================
+# 国际 AI 平台爬虫 - 明确允许
+# ============================================
+
+# OpenAI - ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic - Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Google - Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Apple - Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# ============================================
+# Sitemap
+# ============================================
+Sitemap: https://qibook.com/sitemap.xml

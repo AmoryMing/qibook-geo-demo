@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ========== 主站 qibook.com ========== -->
+
+  <!-- 首页 -->
+  <url>
+    <loc>https://qibook.com/home</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 企业查询页 -->
+  <url>
+    <loc>https://qibook.com/home/search</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ========== AI 站 ai.qibook.com ========== -->
+
+  <!-- AI 对话首页 -->
+  <url>
+    <loc>https://ai.qibook.com/aihome</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI 企业简介 -->
+  <url>
+    <loc>https://ai.qibook.com/aihome/company-brief</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI 企业解读 -->
+  <url>
+    <loc>https://ai.qibook.com/aihome/company-analysis</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 个人工商信息简报 -->
+  <url>
+    <loc>https://ai.qibook.com/aihome/personal-report</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ========== MCP 站 mcp.qibook.com ========== -->
+
+  <!-- MCP 首页 -->
+  <url>
+    <loc>https://mcp.qibook.com/</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- MCP 产品介绍 -->
+  <url>
+    <loc>https://mcp.qibook.com/product</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- MCP 接入指南 -->
+  <url>
+    <loc>https://mcp.qibook.com/guide</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- MCP 数据工具列表 -->
+  <url>
+    <loc>https://mcp.qibook.com/tools</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
