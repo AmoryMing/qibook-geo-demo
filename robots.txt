@@ -87,6 +87,10 @@ User-agent: Applebot-Extended
 Allow: /
 
 # ============================================
-# Sitemap
+# Sitemap & LLMs Content Index
 # ============================================
 Sitemap: https://qibook.com/sitemap.xml
+
+# LLM 内容索引 - 供AI大模型理解网站内容结构
+# https://qibook.com/llms.txt
+# https://qibook.com/llms-full.txt

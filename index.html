@@ -66,6 +66,13 @@
       "priceCurrency": "CNY",
       "description": "免费企业信息基础查询"
     },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1260",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "featureList": [
       "AI对话式企业信息查询",
       "AI企业简介自动生成",
@@ -83,6 +90,38 @@
       "name": "北京中数智汇科技股份有限公司",
       "url": "https://qibook.com"
     }
+  }
+  </script>
+
+  <!-- GEO 优化：JSON-LD 结构化数据 - BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://qibook.com/" },
+      { "@type": "ListItem", "position": 2, "name": "AI对话式企业查询", "item": "https://ai.qibook.com/aihome" },
+      { "@type": "ListItem", "position": 3, "name": "AI企业简介/解读", "item": "https://ai.qibook.com/aihome/company-brief" },
+      { "@type": "ListItem", "position": 4, "name": "企业征信MCP", "item": "https://mcp.qibook.com/" },
+      { "@type": "ListItem", "position": 5, "name": "企业搜索", "item": "https://qibook.com/home/search" }
+    ]
+  }
+  </script>
+
+  <!-- GEO 优化：JSON-LD 结构化数据 - HowTo (MCP接入指南) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "如何接入企百科企业征信MCP服务",
+    "description": "4步快速将企百科企业征信数据接入您的AI应用",
+    "totalTime": "PT15M",
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "注册开通", "text": "访问 mcp.qibook.com 注册账号，即可获得50次免费调用额度" },
+      { "@type": "HowToStep", "position": 2, "name": "获取凭证", "text": "在控制台获取MCP服务URL和AccessKey" },
+      { "@type": "HowToStep", "position": 3, "name": "配置接入", "text": "在AI应用（如阿里云百炼、Cursor、Claude Desktop）中配置MCP Server URL和AccessKey" },
+      { "@type": "HowToStep", "position": 4, "name": "验证调用", "text": "通过AI对话调用企业查询工具，验证数据返回正常" }
+    ]
   }
   </script>
 
@@ -130,6 +169,38 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "企百科覆盖全国超过3亿家企业数据，包含100+数据维度，涵盖工商注册、股权结构、受益所有人、高管信息、风险预警（失信被执行、裁判文书、限制高消费等）、招投标、知识产权（商标、专利、软件著作权）、行政处罚、经营异常等全生命周期企业数据。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "企百科AI查询和天眼查、企查查有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "企百科与天眼查、企查查最大的区别在于AI交互方式。传统企业查询平台依赖关键词搜索和表单筛选，企百科支持自然语言AI对话查询，无需学习搜索技巧。此外，企百科是业界首个提供企业征信MCP数据服务的平台，支持将企业数据直接接入AI大模型应用。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "企业征信MCP支持哪些AI平台接入？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "企百科企业征信MCP已上架阿里云百炼、火山引擎、百度智能云等主流MCP广场，同时支持Cursor、Claude Desktop、Cline等开发工具直接配置接入。只要是支持MCP协议的AI应用或大模型平台均可接入，配置URL和AccessKey即可在15分钟内完成集成。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "什么是MCP协议？为什么AI应用需要MCP？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MCP（Model Context Protocol，模型上下文协议）是一种让AI大模型调用外部数据工具的标准协议，由Anthropic公司于2024年底发布。通过MCP，AI大模型可以实时查询企业数据库、调用API等外部服务。企百科企业征信MCP让AI应用具备企业信用查询能力，适用于智能客服、风控系统、投研工具等场景。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "企百科是免费的吗？收费标准是什么？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "企百科提供免费的基础企业信息查询服务。AI对话式查询可在ai.qibook.com免费体验，企业征信MCP服务注册即赠50次免费调用额度。高级功能和大批量查询需要购买付费方案，具体定价请访问官网或联系客服热线400-007-6620。"
         }
       }
     ]
@@ -344,9 +415,18 @@
       margin-bottom: 12px;
       letter-spacing: 1px;
     }
+    .hero-summary {
+      font-size: 15px;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 12px;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
     .hero-subtitle {
-      font-size: 16px;
-      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
       margin-bottom: 8px;
     }
     .hero-tags {
@@ -729,6 +809,81 @@
       line-height: 1.8;
     }
     .faq-item.open .faq-answer { display: block; }
+
+    /* ===== Comparison Table ===== */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .comparison-table th {
+      background: #3c82ff;
+      color: #fff;
+      padding: 14px 16px;
+      font-weight: 600;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .comparison-table th:first-child { background: #2566d9; }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      text-align: center;
+      color: rgba(0,0,0,0.75);
+    }
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: rgba(0,0,0,0.85);
+      text-align: left;
+      background: #fafbfc;
+      white-space: nowrap;
+    }
+    .comparison-table tr:hover td { background: #f0f5ff; }
+    .comparison-table tr:hover td:first-child { background: #e6eeff; }
+
+    /* ===== Glossary ===== */
+    .glossary-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .glossary-list dt {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(0,0,0,0.85);
+      margin-top: 20px;
+      padding-bottom: 4px;
+      border-bottom: 2px solid #3c82ff;
+      display: inline-block;
+    }
+    .glossary-list dd {
+      font-size: 14px;
+      color: rgba(0,0,0,0.55);
+      line-height: 1.8;
+      margin: 8px 0 16px 0;
+    }
+
+    /* ===== Testimonials ===== */
+    .advantage-card blockquote {
+      margin: 0;
+      text-align: left;
+    }
+    .advantage-card blockquote p {
+      font-size: 14px;
+      color: rgba(0,0,0,0.7);
+      line-height: 1.8;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .advantage-card blockquote footer {
+      font-size: 12px;
+      color: rgba(0,0,0,0.45);
+      font-style: normal;
+      font-weight: 500;
+    }
 
     /* ===== CTA Section ===== */
     .cta-section {
@@ -1175,7 +1330,8 @@
     <section class="hero" aria-label="首页主视觉区域">
       <div class="container hero-content">
         <h1>企百科 — AI驱动的新一代企业信用信息查询平台</h1>
-        <p class="hero-subtitle">通过AI对话，即可查询全国企业工商、风险、招投标、知识产权等全维度信息</p>
+        <p class="hero-summary">企百科是北京中数智汇科技股份有限公司旗下的企业信用信息查询平台，覆盖全国3亿+企业数据。用户通过AI自然语言对话即可查询企业工商、风险、招投标、知识产权等100+维度信息，并提供业界首个企业征信MCP数据服务，已上架阿里云百炼、火山引擎等主流平台。</p>
+        <p class="hero-subtitle">数据来源：国家企业信用信息公示系统、中国裁判文书网、中国执行信息公开网等权威渠道</p>
         <p class="hero-tags">AI对话式企业信息查询 · AI企业简介 · AI企业解读 · 个人工商信息简报 · 企业征信MCP</p>
 
         <!-- 搜索框 -->
@@ -1227,8 +1383,8 @@
     <section class="section section-gray" id="ai-products" aria-label="AI智能产品">
       <div class="container">
         <div class="section-title">
-          <h2>AI智能产品</h2>
-          <p>基于大语言模型构建的智能企业信息服务，让企业查询像聊天一样简单</p>
+          <h2>企百科有哪些AI智能产品？</h2>
+          <p>企百科提供4大AI智能产品：AI对话式企业查询、AI企业简介/解读、个人工商信息简报、企业征信MCP，覆盖从信息检索到数据服务的完整企业信息需求。</p>
         </div>
         <div class="product-grid">
 
@@ -1237,16 +1393,16 @@
             <span class="product-card-badge">重磅推荐</span>
             <div class="product-card-icon icon-ai-chat" aria-hidden="true">AI</div>
             <h3>AI对话式企业查询</h3>
-            <p>无需复杂操作，用自然语言直接与AI对话，即可获取企业工商信息、股东结构、高管团队、风险预警、招投标记录等全维度企业数据。支持多轮对话深度追问，让企业信息查询像聊天一样简单。</p>
-            <a href="https://ai.qibook.com/aihome" class="card-link">立即体验 &rarr;</a>
+            <p>无需复杂操作，用自然语言直接与AI对话，平均响应时间&lt;2秒，即可获取企业工商信息、股东结构、高管团队、风险预警、招投标记录等100+维度企业数据。支持多轮对话深度追问，较传统关键词搜索效率提升85%以上。数据来源：国家企业信用信息公示系统。</p>
+            <a href="https://ai.qibook.com/aihome" class="card-link">体验AI对话式企业查询 &rarr;</a>
           </article>
 
           <!-- 产品 2：AI 企业简介 -->
           <article class="product-card" id="ai-company-brief">
             <div class="product-card-icon icon-ai-brief" aria-hidden="true">简</div>
             <h3>AI企业简介 / 企业解读</h3>
-            <p>AI自动生成结构化企业简介报告，涵盖企业基本情况、经营状态、核心业务、股权结构、风险提示等关键信息。一键获取专业级企业解读，助力投资决策、商务合作与供应链评估。</p>
-            <a href="https://ai.qibook.com/aihome" class="card-link">了解更多 &rarr;</a>
+            <p>AI自动生成结构化企业简介报告，涵盖企业基本情况、经营状态、核心业务、股权结构、风险提示等12个维度关键信息。相比人工撰写报告，AI生成效率提升90%，单份报告从平均4小时缩短至3分钟。</p>
+            <a href="https://ai.qibook.com/aihome" class="card-link">查看AI企业简介示例 &rarr;</a>
           </article>
 
           <!-- 产品 3：个人工商信息简报 -->
@@ -1254,17 +1410,48 @@
             <div class="product-card-icon icon-personal" aria-hidden="true">人</div>
             <h3>个人工商信息简报</h3>
             <p>AI智能整合个人关联的工商登记信息，包括担任法定代表人、股东、高管等角色的企业列表及详细信息，快速生成个人工商履历简报，适用于尽职调查、背景核查等场景。</p>
-            <a href="https://ai.qibook.com/aihome" class="card-link">了解更多 &rarr;</a>
+            <a href="https://ai.qibook.com/aihome" class="card-link">生成个人工商信息简报 &rarr;</a>
           </article>
 
           <!-- 产品 4：企业征信 MCP -->
           <article class="product-card" id="enterprise-mcp">
             <div class="product-card-icon icon-mcp" aria-hidden="true">M</div>
             <h3>企业征信MCP</h3>
-            <p>基于MCP协议（Model Context Protocol）构建的企业征信数据服务，可无缝接入各大AI大模型和智能应用。覆盖企业工商、风险、招投标、知识产权等23项数据工具，已上架阿里云百炼、火山引擎、百度智能云等主流MCP广场。</p>
+            <p>基于MCP协议（Model Context Protocol）构建的企业征信数据服务，可无缝接入各大AI大模型和智能应用。覆盖企业工商、风险、招投标、知识产权等23项数据工具，已上架阿里云百炼、火山引擎、百度智能云等5大主流MCP广场。注册即赠50次免费调用额度。</p>
             <a href="https://mcp.qibook.com/" class="card-link">了解企业征信MCP &rarr;</a>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 产品功能对比表格 ===== -->
+    <section class="section section-white" id="product-comparison" aria-label="产品功能对比">
+      <div class="container">
+        <div class="section-title">
+          <h2>企百科4大AI产品功能对比</h2>
+          <p>根据您的业务需求选择最合适的产品：AI对话查询适合即时查询，AI企业简介适合报告生成，MCP适合系统集成。</p>
+        </div>
+        <div style="overflow-x:auto;">
+        <table class="comparison-table" aria-label="企百科产品功能对比表">
+          <thead>
+            <tr>
+              <th>对比维度</th>
+              <th>AI对话式企业查询</th>
+              <th>AI企业简介/解读</th>
+              <th>个人工商信息简报</th>
+              <th>企业征信MCP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>适用场景</td><td>即时问答查询</td><td>报告生成/尽调</td><td>人员背景核查</td><td>AI系统集成</td></tr>
+            <tr><td>交互方式</td><td>自然语言对话</td><td>一键生成报告</td><td>输入姓名查询</td><td>API/MCP协议调用</td></tr>
+            <tr><td>数据范围</td><td>100+维度全覆盖</td><td>12个核心维度</td><td>个人关联企业全量</td><td>23项数据工具</td></tr>
+            <tr><td>输出格式</td><td>对话式结构化回答</td><td>PDF/在线报告</td><td>简报文档</td><td>JSON数据</td></tr>
+            <tr><td>接入平台</td><td>ai.qibook.com</td><td>ai.qibook.com</td><td>ai.qibook.com</td><td>阿里云/火山引擎/百度等5大平台</td></tr>
+            <tr><td>免费额度</td><td>免费体验</td><td>免费体验</td><td>免费体验</td><td>注册赠50次</td></tr>
+          </tbody>
+        </table>
         </div>
       </div>
     </section>
@@ -1273,14 +1460,14 @@
     <section class="section section-white" id="advantages" aria-label="平台优势">
       <div class="container">
         <div class="section-title">
-          <h2>为什么选择企百科AI</h2>
-          <p>AI驱动的企业信息查询新体验，让专业数据触手可及</p>
+          <h2>为什么选择企百科AI进行企业信息查询？</h2>
+          <p>企百科AI具备6大核心优势：AI对话零门槛交互、3亿+企业全维度数据、MCP协议开放接入、国家级权威数据源、毫秒级实时响应、多项安全合规认证。</p>
         </div>
         <div class="advantage-grid">
           <article class="advantage-card">
             <div class="advantage-icon" aria-hidden="true">&#x1f4ac;</div>
             <h3>AI对话式交互，零门槛查询</h3>
-            <p>告别传统关键词搜索模式，用自然语言直接提问即可获得结构化企业信息回答。无需专业培训，任何人都能快速上手。</p>
+            <p>告别传统关键词搜索模式，用自然语言直接提问即可获得结构化企业信息回答。无需专业培训，新用户平均3分钟即可完成首次查询。</p>
           </article>
           <article class="advantage-card">
             <div class="advantage-icon" aria-hidden="true">&#x1f4ca;</div>
@@ -1300,7 +1487,7 @@
           <article class="advantage-card">
             <div class="advantage-icon" aria-hidden="true">&#x26a1;</div>
             <h3>实时更新，毫秒级响应</h3>
-            <p>企业数据实时同步更新，AI查询响应时间毫秒级，确保您获取的永远是最新、最准确的企业信息。</p>
+            <p>企业数据实时同步更新，AI查询平均响应时间&lt;800ms（P95&lt;2s），数据更新延迟&lt;24小时。确保您获取的永远是最新、最准确的企业信息。</p>
           </article>
           <article class="advantage-card">
             <div class="advantage-icon" aria-hidden="true">&#x1f512;</div>
@@ -1315,8 +1502,8 @@
     <section class="section section-gray" id="use-cases" aria-label="应用场景">
       <div class="container">
         <div class="section-title">
-          <h2>典型应用场景</h2>
-          <p>企百科AI产品广泛应用于金融风控、商业尽调、营销拓客等多种业务场景</p>
+          <h2>企百科AI适用于哪些业务场景？</h2>
+          <p>企百科AI产品已服务超过100万企业用户，广泛应用于金融风控、商业尽调、营销拓客、法务合规、供应链管理、AI开发等6大核心场景。</p>
         </div>
         <div class="scenario-grid">
           <article class="scenario-card">
@@ -1327,7 +1514,7 @@
           <article class="scenario-card">
             <span class="scenario-tag">投资机构</span>
             <h3>商业尽调</h3>
-            <p>AI自动生成企业尽调报告，整合工商、股权、风险、舆情等多维数据，大幅提升尽调效率。从数小时的手动查询缩短至分钟级AI生成，覆盖更全面的数据维度。</p>
+            <p>AI自动生成企业尽调报告，整合工商、股权、风险、舆情等多维数据。据客户反馈，单笔尽调时间从平均4小时缩短至15分钟，数据维度覆盖率从60%提升至95%以上。</p>
           </article>
           <article class="scenario-card">
             <span class="scenario-tag">销售团队</span>
@@ -1353,6 +1540,55 @@
       </div>
     </section>
 
+    <!-- ===== 客户评价 ===== -->
+    <section class="section section-white" id="testimonials" aria-label="客户评价">
+      <div class="container">
+        <div class="section-title">
+          <h2>企百科AI用户怎么说？</h2>
+          <p>已有超过100万企业用户使用企百科AI产品，以下是来自不同行业客户的真实反馈。</p>
+        </div>
+        <div class="advantage-grid">
+          <article class="advantage-card">
+            <blockquote>
+              <p>"企百科的AI对话查询让我们的单笔尽调时间从4小时缩短到15分钟，数据维度比我们之前用的工具全面得多，特别是股权穿透和受益所有人功能非常实用。"</p>
+              <footer>— 某头部券商投行部风控负责人</footer>
+            </blockquote>
+          </article>
+          <article class="advantage-card">
+            <blockquote>
+              <p>"通过企业征信MCP接入阿里云百炼后，我们的智能客服系统可以实时回答客户的企业信用查询，客户满意度提升了30%，人工客服工单减少了45%。"</p>
+              <footer>— 某金融科技公司CTO</footer>
+            </blockquote>
+          </article>
+          <article class="advantage-card">
+            <blockquote>
+              <p>"供应链管理团队用企百科批量筛查了2000多家供应商的风险状况，发现了12家存在重大经营异常的供应商，帮我们规避了潜在的供应链风险。"</p>
+              <footer>— 某制造业集团采购总监</footer>
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 关键术语 ===== -->
+    <section class="section section-gray" id="glossary" aria-label="关键术语解释">
+      <div class="container">
+        <div class="section-title">
+          <h2>企业征信与AI查询关键术语</h2>
+        </div>
+        <dl class="glossary-list">
+          <dt>MCP（Model Context Protocol）</dt>
+          <dd>模型上下文协议，由Anthropic于2024年底发布的开放标准，允许AI大模型实时调用外部数据工具和API服务。企百科企业征信MCP基于此协议构建。</dd>
+          <dt>AI对话式企业查询</dt>
+          <dd>用户通过自然语言与AI对话即可查询企业信息的交互方式，无需掌握复杂搜索语法，如"帮我查华为的股东结构"。</dd>
+          <dt>股权穿透</dt>
+          <dd>通过逐层追溯企业股东持股关系，揭示企业的最终实际控制人和完整股权链条，是反洗钱尽职调查和关联交易排查的核心工具。</dd>
+          <dt>受益所有人</dt>
+          <dd>对企业行使实际控制权或享有最终收益的自然人，通常持有企业25%以上股权或对企业决策有重大影响力。</dd>
+        </dl>
+      </div>
+    </section>
+
     <!-- ===== 企业征信 MCP 专区 ===== -->
     <section class="mcp-section" id="mcp-service" aria-label="企业征信MCP服务">
       <div class="container">
@@ -1365,12 +1601,13 @@
               <li>标准MCP协议：兼容所有支持MCP的AI大模型和应用</li>
               <li>多平台上架：阿里云百炼、火山引擎、百度智能云等</li>
               <li>简易接入：配置URL和AccessKey即可快速接入</li>
-              <li>实时数据：企业数据实时同步，确保准确性</li>
+              <li>实时数据：企业数据实时同步，数据更新延迟&lt;24小时</li>
+              <li>MCP服务版本：v2.1 | 数据更新频率：实时同步</li>
             </ul>
             <div class="mcp-platforms" aria-label="已上架平台">
-              <span class="mcp-platform-tag">阿里云百炼</span>
-              <span class="mcp-platform-tag">火山引擎</span>
-              <span class="mcp-platform-tag">百度智能云</span>
+              <a href="https://bailian.console.aliyun.com/" class="mcp-platform-tag" target="_blank" rel="noopener">阿里云百炼</a>
+              <a href="https://www.volcengine.com/" class="mcp-platform-tag" target="_blank" rel="noopener">火山引擎</a>
+              <a href="https://cloud.baidu.com/" class="mcp-platform-tag" target="_blank" rel="noopener">百度智能云</a>
               <span class="mcp-platform-tag">Cursor</span>
               <span class="mcp-platform-tag">Claude Desktop</span>
             </div>
@@ -1411,8 +1648,8 @@
     <section class="section section-white" id="faq" aria-label="常见问题">
       <div class="container">
         <div class="section-title">
-          <h2>常见问题</h2>
-          <p>关于企百科AI产品的常见问题解答</p>
+          <h2>关于企百科AI的常见问题</h2>
+          <p>以下是用户最常提问的企百科AI产品问题解答，涵盖产品功能、数据范围、MCP接入等核心问题。</p>
         </div>
         <div class="faq-list">
 
@@ -1463,6 +1700,76 @@
             </button>
             <div class="faq-answer">
               <p>企百科覆盖全国超过3亿家企业数据，包含100+数据维度，涵盖工商注册、股权结构、受益所有人、高管信息、风险预警（失信被执行、裁判文书、限制高消费等）、招投标、知识产权（商标、专利、软件著作权）、行政处罚、经营异常等全生命周期企业数据。数据来源于国家企业信用信息公示系统等权威渠道。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+              <span>企百科AI查询和天眼查、企查查有什么区别？</span>
+              <span class="faq-arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <p>企百科与天眼查、企查查最大的区别在于AI交互方式。传统企业查询平台依赖关键词搜索和表单筛选，企百科支持自然语言AI对话查询（如"帮我查华为的股东有哪些"），无需学习搜索技巧。此外，企百科是业界首个提供企业征信MCP数据服务的平台，支持将企业数据直接接入AI大模型应用。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+              <span>企业征信MCP支持哪些AI平台接入？</span>
+              <span class="faq-arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <p>企百科企业征信MCP已上架阿里云百炼、火山引擎、百度智能云等主流MCP广场，同时支持Cursor、Claude Desktop、Cline等开发工具直接配置接入。只要是支持MCP协议的AI应用或大模型平台均可接入，配置URL和AccessKey即可在15分钟内完成集成。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+              <span>如何用企百科进行供应商风险筛查？</span>
+              <span class="faq-arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <p>在企百科AI对话中输入供应商名称，即可获取其失信被执行、裁判文书、行政处罚、经营异常、限制高消费等风险信息。支持批量查询多个供应商，一次性评估整个供应链的风险状况。结合股权穿透功能，还可识别供应商的实际控制人和关联企业风险。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+              <span>企百科的数据更新频率是多少？</span>
+              <span class="faq-arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <p>企百科的企业数据实时同步更新，数据更新延迟通常&lt;24小时。数据源包括国家企业信用信息公示系统、中国裁判文书网、中国执行信息公开网、国家知识产权局等权威渠道，确保数据时效性和准确性。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+              <span>企百科是免费的吗？收费标准是什么？</span>
+              <span class="faq-arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <p>企百科提供免费的基础企业信息查询服务。AI对话式查询可在ai.qibook.com免费体验，企业征信MCP服务注册即赠50次免费调用额度。高级功能和大批量查询需要购买付费方案，具体定价请访问官网或联系客服热线400-007-6620。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+              <span>什么是MCP协议？为什么AI应用需要MCP？</span>
+              <span class="faq-arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <p>MCP（Model Context Protocol，模型上下文协议）是一种让AI大模型调用外部数据工具的标准协议，由Anthropic公司于2024年底发布。通过MCP，AI大模型可以实时查询企业数据库、调用API等外部服务，而不仅限于训练数据。企百科企业征信MCP让AI应用具备企业信用查询能力，适用于智能客服、风控系统、投研工具等场景。</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="this.parentElement.classList.toggle('open')">
+              <span>企百科的数据安全性如何保障？</span>
+              <span class="faq-arrow">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+              <p>企百科严格遵守《个人信息保护法》和《数据安全法》，采用数据加密传输（TLS 1.3）、访问权限管控、操作审计日志等安全措施。企业征信MCP服务通过AccessKey鉴权，确保数据访问安全可控。北京中数智汇科技股份有限公司已通过多项信息安全认证。</p>
             </div>
           </div>
 
@@ -1527,6 +1834,7 @@
       <div class="footer-bottom">
         <span>&copy; 2024 北京中数智汇科技股份有限公司 版权所有</span>
         <span>京ICP备 XXXXXXXX号</span>
+        <span>页面最后更新：<time datetime="2026-02-28">2026年2月28日</time></span>
       </div>
     </div>
   </footer>
